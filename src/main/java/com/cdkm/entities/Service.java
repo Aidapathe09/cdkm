@@ -13,11 +13,9 @@ import lombok.Setter;
 public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idAdresse;
+    private Long idUtilisateur;
 
-    private String ville;
-
-    private String region;
-    private String quartier;
+    private String nomService;
+    private String motDePasse;
 }
 
