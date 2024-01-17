@@ -10,5 +10,4 @@ public class CdkmApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CdkmApplication.class, args);
 	}
-
 }

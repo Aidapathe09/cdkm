@@ -1,14 +1,21 @@
 package com.cdkm.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Getter
 @Setter
 @Entity
 public class Documentation {
-    private String Arrete;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long arrete;
+
     private String Decision;
     private String Demandes;
 
