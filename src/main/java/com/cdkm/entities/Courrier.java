@@ -13,6 +13,7 @@ import lombok.Setter;
 public class Courrier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Long date;
 
     private String service;

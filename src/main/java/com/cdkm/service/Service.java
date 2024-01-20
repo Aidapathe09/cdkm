@@ -1,4 +1,4 @@
-package com.cdkm.entities;
+package com.cdkm.service;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
