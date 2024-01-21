@@ -1,6 +1,6 @@
 package com.cdkm.repository;
 
-import com.cdkm.service.Service;
+import com.cdkm.entities.Service;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ServiceRepository

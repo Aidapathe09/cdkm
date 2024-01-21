@@ -1,4 +1,4 @@
-package com.cdkm.service;
+package com.cdkm.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,11 +13,9 @@ import lombok.Setter;
 public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    private Long idUtilisateur;
+    private Long id;
 
     private String nomService;
-    private String motDePasse;
+
 
 }
-

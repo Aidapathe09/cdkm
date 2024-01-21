@@ -1,7 +1,7 @@
 package com.cdkm.controller;
 
-import com.cdkm.entities.Courrier;
-import com.cdkm.service.CourrierService;
+import com.cdkm.entities.Archive;
+import com.cdkm.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,25 +12,25 @@ import java.util.Optional;
 @RequestMapping("/api/courriers")
 public class CourrierController {
 
-    private final CourrierService courrierService;
+    private final ArchiveService courrierService;
 
     @Autowired
-    public CourrierController(CourrierService courrierService) {
+    public CourrierController(ArchiveService courrierService) {
         this.courrierService = courrierService;
     }
 
     @GetMapping
-    public List<Courrier> getAllCourriers() {
+    public List<Archive> getAllCourriers() {
         return courrierService.getAllCourriers();
     }
 
     @GetMapping("/{id}")
-    public Optional<Courrier> getCourrierById(@PathVariable Long id) {
+    public Optional<Archive> getCourrierById(@PathVariable Long id) {
         return courrierService.getCourrierById(id);
     }
 
     @PostMapping("/add")
-    public Courrier saveCourrier(@RequestBody Courrier courrier) {
+    public Archive saveCourrier(@RequestBody Archive courrier) {
         return courrierService.saveCourrier(courrier);
     }
 

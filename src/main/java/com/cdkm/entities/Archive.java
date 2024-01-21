@@ -6,13 +6,23 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.jpa.repository.JpaRepository;
 
-public class Accesdoc {
+import java.time.LocalDate;
+
+@Entity
+@Getter
+@Setter
+public class Archive {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private LocalDate date;
 
-    private String motDePasse;
-    
+    private String service;
+    private String observation;
+    private String piecesJointes;
+    private String objet;
+    private String expediteur;
+    private String typeArchive;
+
 }
