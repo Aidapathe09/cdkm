@@ -32,10 +32,10 @@ public class ArchiveService {
     }
 
     public List<Archive> getAllCourriers() {
-        return null;
+        return archiveRepository.findAll();
     }
 
-    public <Optionnal> Optionnal getCourrierById(Long id) {
-        return null;
+    public  Optional<Archive> getCourrierById(Long id) {
+        return archiveRepository.findById(id);
     }
 }
